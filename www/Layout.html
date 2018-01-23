@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Marcus</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+
+    <link href="css/kendo.common.min.css"     rel="stylesheet"  />
+    <link href="css/kendo.default.min.css"    rel="stylesheet"  />
+    <link href="css/kendo.mobile.all.min.css" rel="stylesheet"  />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <script type="text/javascript" src="cordova.js"></script>    
+    <script type="text/javascript" src="plugins/cordova-sqlite-storage/www/SQLitePlugin.js"></script>
+    <script type="text/javascript" src="scripts/jquery-2.2.3.min.js"></script>   
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+   
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>	
+	<script type="text/javascript" src="scripts/angular-route.min.js"></script>
+    
+    <script src="scripts/kendo.all.min.js"></script>
+
+	<script type="text/javascript" src="Assets/qbmain.js"></script>
+    <script type="text/javascript" src="Assets/login.js"></script>
+    <script type="text/javascript" src="Assets/home.js"></script>
+    
+    
+
+</head>
+<body ng-app="quayboard">
+    <header id="qlHeader" style="display:none" ng-controller="layoutCtrl" class="navbar-fixed-top">
+        
+        <div kendo-mobile-nav-bar>
+            Marcus
+            <a class="nav-button glyphicon glyphicon-log-out logout" data-align="right" ng-click="LogOut()" data-icon="action" data-role="button"></a>
+        </div>
+
+    </header>
+    <header id="qlInnerPageHeader" style="display:none" ng-controller="layoutCtrl" class="navbar-fixed-top">
+        <div kendo-mobile-nav-bar>
+            <a class="nav-button km-button km-back" data-align="left" onclick="GoBack()" data-icon="action" data-role="button"></a>
+            <span data-role="view-title">{{InnerHeader}}</span>
+            <a class="nav-button glyphicon glyphicon-log-out logout" data-align="right" ng-click="LogOut()" data-icon="action" data-role="button"></a>
+        </div>
+    </header>
+
+    <div ng-view style="padding-top:50px"></div>
+    
+</body>
+</html>
